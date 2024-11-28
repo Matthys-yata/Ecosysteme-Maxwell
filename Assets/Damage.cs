@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DamageDealer : MonoBehaviour
+public class Damage : MonoBehaviour
 {
     public GameObject target;
     public List<GameObject> Targets;

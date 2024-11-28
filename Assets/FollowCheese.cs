@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AI_Test_Interest_New : MonoBehaviour
+public class FollowCheese : MonoBehaviour
 {
     private Vector3 targetPosition; // Vector pour diriger l'IA vers le point le plus proche
 
