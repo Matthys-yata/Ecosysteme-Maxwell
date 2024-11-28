@@ -134,10 +134,9 @@ GameObject:
   - component: {fileID: 20196956}
   - component: {fileID: 20196955}
   - component: {fileID: 20196954}
-  - component: {fileID: 20196958}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Cheese
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,23 +227,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &20196958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 20196953}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 258409ee32ca6b943b4d0d7899f267b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToSpawn: {fileID: 20196953}
-  spawnRadius: 5
-  spawnInterval: 100
-  maxSpawnCount: 10
-  canSpawn: 1
 --- !u!1001 &73244809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1274,10 +1256,11 @@ GameObject:
   - component: {fileID: 2257853129589371037}
   - component: {fileID: 2561063718594249085}
   - component: {fileID: 5729836601751416371}
+  - component: {fileID: 5729836601751416372}
   m_Layer: 0
   m_Name: Fromager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1295,6 +1278,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathPoints: []
   moveSpeed: 3
+--- !u!114 &5729836601751416372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5729836601751416370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 258409ee32ca6b943b4d0d7899f267b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToSpawn: {fileID: 20196953}
+  spawnRadius: 10
+  spawnInterval: 2
+  maxSpawnCount: 50
+  canSpawn: 1
+  Player: {fileID: 0}
 --- !u!1001 &5933297805562324167
 PrefabInstance:
   m_ObjectHideFlags: 0
