@@ -18,10 +18,10 @@ public class FromagerMovement : MonoBehaviour
 
         // Vous pouvez définir les points directement ici, en modifiant les positions
         // Créez des objets vides dans la scène et assignez-les à ces variables
-        pathPoints[0] = CreatePoint(new Vector3(0, 0, 0));  // Point 1
-        pathPoints[1] = CreatePoint(new Vector3(10, 0, 0)); // Point 2
-        pathPoints[2] = CreatePoint(new Vector3(10, 0, 10)); // Point 3
-        pathPoints[3] = CreatePoint(new Vector3(0, 0, 10)); // Point 4
+        pathPoints[0] = CreatePoint(new Vector3(0, 1, 0));  // Point 1
+        pathPoints[1] = CreatePoint(new Vector3(10, 1, 0)); // Point 2
+        pathPoints[2] = CreatePoint(new Vector3(10, 1, 10)); // Point 3
+        pathPoints[3] = CreatePoint(new Vector3(0, 1, 10)); // Point 4
     }
 
     void Update()

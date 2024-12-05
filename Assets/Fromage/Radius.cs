@@ -19,7 +19,7 @@ public class Radius : MonoBehaviour
         // Commence à faire apparaître des objets après un certain délai et à intervalles réguliers
         if (canSpawn)
         {
-            InvokeRepeating("SpawnObject", 0f, spawnInterval);
+            InvokeRepeating("Cheese", 0f, spawnInterval);
         }
     }
 
@@ -29,11 +29,11 @@ public class Radius : MonoBehaviour
         if (currentSpawnCount >= maxSpawnCount)
         {
             canSpawn = false; // Désactive le spawn
-            CancelInvoke("SpawnObject"); // Annule les appels répétés pour spawn
+            CancelInvoke("Cheese"); // Annule les appels répétés pour spawn
         }
     }
 
-    private void SpawnObject()
+    private void Cheese()
     { 
         // Calculer une position aléatoire dans un rayon autour de l'objet actuel
         Vector3 randomDirection = Random.insideUnitSphere * spawnRadius;  // Génère une direction aléatoire
@@ -46,7 +46,7 @@ public class Radius : MonoBehaviour
         GameObject spawnedObject = Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
 
         // Assigner un tag à l'objet spawné
-        spawnedObject.tag = "SpawnedObject";  // Assurez-vous que "SpawnedObject" est un tag valide
+        spawnedObject.tag = "Cheese";  // Assurez-vous que "SpawnedObject" est un tag valide
 
         // Incrémenter le compteur de spawns
         currentSpawnCount++;
