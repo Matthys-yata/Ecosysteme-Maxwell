@@ -37,7 +37,7 @@ public class Radius : MonoBehaviour
     { 
         // Calculer une position aléatoire dans un rayon autour de l'objet actuel
         Vector3 randomDirection = Random.insideUnitSphere * spawnRadius;  // Génère une direction aléatoire
-        randomDirection.y = 0f;  // Assure que l'objet spawnera à la même hauteur (niveau du sol)
+        randomDirection.y = -1.5f;  // Assure que l'objet spawnera à la même hauteur (niveau du sol)
 
         // Ajouter cette direction aléatoire à la position actuelle pour obtenir la position de spawn
         Vector3 spawnPosition = transform.position + randomDirection;
