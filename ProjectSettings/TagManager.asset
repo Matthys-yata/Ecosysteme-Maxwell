@@ -9,6 +9,7 @@ TagManager:
   - Objectif
   - Mouse
   - SpawedObject
+  - Pelote
   layers:
   - Default
   - TransparentFX

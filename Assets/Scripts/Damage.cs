@@ -16,7 +16,6 @@ public class Damage : MonoBehaviour
             if (health != null)
             {
                 health.TakeDamage(damage);
-                Debug.Log($"{gameObject.name} inflige {damage} de dégâts à {collision.gameObject.name}.");
             }
         }
     }

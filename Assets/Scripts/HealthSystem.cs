@@ -15,7 +15,6 @@ public class HealthSystem : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        Debug.Log($"{gameObject.name} a maintenant {currentHealth}/{maxHealth} points de santé.");
 
         if (currentHealth <= 0)
         {
@@ -25,7 +24,6 @@ public class HealthSystem : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log($"{gameObject.name} est détruit !");
         Destroy(gameObject);
     }
 }

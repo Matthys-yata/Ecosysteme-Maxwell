@@ -4,8 +4,8 @@ using System.Collections;
 
 public class StunAndDamageCheese : MonoBehaviour
 {
-    public float stunDuration = 2f; // Durée du stun en secondes
-    public int damage = 1; // Dégâts infligés au fromage
+    public float stunDuration = 2f;
+    public int damage = 1;
     private NavMeshAgent navMeshAgent;
     private bool isStunned = false;
 
@@ -16,30 +16,27 @@ public class StunAndDamageCheese : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        // Si la souris touche un fromage et n'est pas déjà stun
         if (other.CompareTag("Cheese") && !isStunned)
         {
             CheeseHealth cheeseHealth = other.GetComponent<CheeseHealth>();
 
             if (cheeseHealth != null)
             {
-                cheeseHealth.TakeDamage(damage); // Inflige des dégâts au fromage
+                cheeseHealth.TakeDamage(damage);
             }
 
-            StartCoroutine(Stun()); // Lance la coroutine de stun
+            StartCoroutine(Stun());
         }
     }
 
     private IEnumerator Stun()
     {
         isStunned = true;
-        navMeshAgent.isStopped = true; // Arrête le mouvement
-        Debug.Log("Souris est stun!");
+        navMeshAgent.isStopped = true;
 
-        yield return new WaitForSeconds(stunDuration); // Attend la fin du stun
+        yield return new WaitForSeconds(stunDuration); 
 
-        navMeshAgent.isStopped = false; // Redémarre le mouvement
+        navMeshAgent.isStopped = false; 
         isStunned = false;
-        Debug.Log("Souris libérée du stun!");
     }
 }
