@@ -10,6 +10,7 @@ TagManager:
   - Mouse
   - SpawedObject
   - Pelote
+  - Water
   layers:
   - Default
   - TransparentFX

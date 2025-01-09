@@ -2,13 +2,12 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 
-public class StunAndDamageCheese : MonoBehaviour
+public class StunWater : MonoBehaviour
 {
-    public float stunDuration = 2f;
-    public int damage = 1;
+    public float stunDuration = 3f;
     private NavMeshAgent navMeshAgent;
     private bool isStunned = false;
-
+    public hunger_bar _hunger_Bar;
     private void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -16,15 +15,10 @@ public class StunAndDamageCheese : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Cheese") && !isStunned)
+        if (other.CompareTag("Water") && !isStunned)
         {
-            CheeseHealth cheeseHealth = other.GetComponent<CheeseHealth>();
-
-            if (cheeseHealth != null)
-            {
-                cheeseHealth.TakeDamage(damage);
-            }
-
+            KillWater(other.gameObject);
+            _hunger_Bar.RefillWater();
             StartCoroutine(Stun());
         }
     }
@@ -34,9 +28,14 @@ public class StunAndDamageCheese : MonoBehaviour
         isStunned = true;
         navMeshAgent.isStopped = true;
 
-        yield return new WaitForSeconds(stunDuration); 
+        yield return new WaitForSeconds(stunDuration);
 
-        navMeshAgent.isStopped = false; 
+        navMeshAgent.isStopped = false;
         isStunned = false;
+    }
+
+    private void KillWater(GameObject Water)
+    {
+        Destroy(Water);
     }
 }
